@@ -1,4 +1,4 @@
-package Arrays;
+package Introducao.Arrays;
 
 public class ArrayForEach {
     public static void main(String[] args) {

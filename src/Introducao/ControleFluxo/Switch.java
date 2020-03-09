@@ -1,3 +1,5 @@
+package Introducao.ControleFluxo;
+
 public class Switch {
     public static void main(String[] args) {
         byte dia = 1;
