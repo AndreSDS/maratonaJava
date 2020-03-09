@@ -10,9 +10,11 @@ public class CalculadoraTest {
         calc.someDoisNumeros(5,5);
         calc.subtraiDoisNumeros(5,5);
         calc.multiplicaDois(5,5);
+        
+        double result = calc.dividDoisnumeros(20, 5);
+        System.out.println(result);
 
         System.out.println("Chamou o dois métodos!");
-
     }
     
 }
