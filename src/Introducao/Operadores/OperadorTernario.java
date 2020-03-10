@@ -11,12 +11,16 @@ public class OperadorTernario {
 
         if (salario < 1000) {
             inposto5 = (float) (salario - (salario * 0.05));
+            System.out.println(inposto5);
         }else if (salario >= 1000 && salario < 2000) {
-            System.out.println(inposto10 = (float) (salario - (salario * 0.10)));
+        	inposto10 = (float) (salario - (salario * 0.10));
+            System.out.println(inposto10);
         }else if (salario >= 2000 && salario < 4000) {
-            System.out.println(inposto15 =  (float) (salario - (salario * 0.15)));
+        	inposto15 =  (float) (salario - (salario * 0.15));
+            System.out.println(inposto15);
         }else{
-            System.out.println(inposto20 = (float) (salario - (salario * 0.20)));
+        	inposto20 = (float) (salario - (salario * 0.20));
+            System.out.println(inposto20);
         }
     }
 }
