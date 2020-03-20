@@ -1,9 +1,9 @@
 package JavaCore.modificadorStatico.classes;
 
 public class Carro {
-    private String nome;
-    private double velocidadeMax;
-    private static double velocidademin;
+    private static double velocidadeMax;
+    private static String nome;
+    private static double velocidademin = 240;
 
     public Carro() {
     }
@@ -12,7 +12,7 @@ public class Carro {
         System.out.println("------------------------------------------");
         System.out.println(this.nome);
         System.out.println(this.velocidadeMax);
-        System.out.println(this.velocidademin);
+        System.out.println(velocidademin);
     }
 
     public Carro(String nome, double velocidadeMax) {
@@ -24,23 +24,23 @@ public class Carro {
         return velocidadeMax;
     }
 
-    public void setVelocidadeMax(double velocidadeMax) {
-        this.velocidadeMax = velocidadeMax;
+    public static void setVelocidadeMax(double velocidadeMax) {
+        Carro.velocidadeMax = velocidadeMax;
     }
 
-    public double getVelocidademin() {
+    public static double getVelocidademin() {
         return velocidademin;
     }
 
-    public void setVelocidademin(double velocidademin) {
-        this.velocidademin = velocidademin;
+    public static void setVelocidademin(double velocidademin) {
+        Carro.velocidademin = velocidademin;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public static void setNome(String nome) {
+        Carro.nome = nome;
     }
 }
