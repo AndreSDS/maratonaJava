@@ -15,12 +15,27 @@ public class Seminario {
 
     public void print(){
         System.out.printf("Título: %s%n", this.titulo);
-        System.out.printf("Professor palestrante: %s%n", this.professor.getNome());
-        System.out.printf("Local: rua, %s- Bairro: %s%n", this.endereco.getBairro(), endereco.getBairro());
-        System.out.print("Alunos participantes: ");
-        for (Aluno aluno: alunos) {
-            System.out.printf("%s, ", aluno.getNome());
+
+        if (professor != null ) {
+            System.out.printf("Professor palestrante: %s%n", this.professor.getNome());
+        }else{
+            System.out.println("Nenhum professor cadastrado neste seminário!");
         }
+        
+        if (this.endereco != null) {      
+            System.out.printf("Local: rua, %s- Bairro: %s%n", this.endereco.getBairro(), endereco.getBairro());
+        }else{
+            System.out.println("Nenhum local cadastrado para esse seminário!");
+        }
+
+        if (alunos != null && alunos.length != 0) {
+            System.out.print("Alunos participantes: ");
+            for (Aluno aluno: alunos) {
+                System.out.printf("%s, ", aluno.getNome());
+            }
+            return;
+        }
+        System.out.println("Nenhum aluno inscrito neste seminário!");
     }
 
     public Aluno[] getAlunos() {

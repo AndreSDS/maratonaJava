@@ -14,32 +14,37 @@ public class Professor {
         return seminarios;
     }
 
-    public void setSeminarios(Seminario[] seminarios) {
+    public void setSeminarios(final Seminario[] seminarios) {
         this.seminarios = seminarios;
     }
 
     public Professor() {
     }
 
-    public Professor(String nome, String especialidade) {
+    public Professor(final String nome, final String especialidade) {
         this.nome = nome;
         this.especialidade = especialidade;
     }
 
-    public void print(){
-        System.out.println("Nome do professor: "+this.nome);
-        System.out.println("Nome do especialidade: "+this.especialidade);
-        System.out.println("Seminários participantes ");
-        for (Seminario sem : seminarios) {
-            System.out.println(sem.getTitulo() + " ");
+    public void print() {
+        System.out.println("Nome do professor: " + this.nome);
+        System.out.println("Nome do especialidade: " + this.especialidade);
+
+        if (seminarios != null && seminarios.length != 0) {
+            System.out.println("Seminários participantes ");
+            for (final Seminario sem : seminarios) {
+                System.out.println(sem.getTitulo() + " ");
+            }
+            return;
         }
+        System.out.println("Professor não vinculado a nenhum seminário!");
     }
 
     public Aluno[] getAlunos() {
         return alunos;
     }
 
-    public void setAlunos(Aluno[] alunos) {
+    public void setAlunos(final Aluno[] alunos) {
         this.alunos = alunos;
     }
 
@@ -47,7 +52,7 @@ public class Professor {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(final String nome) {
         this.nome = nome;
     }
 
@@ -55,7 +60,7 @@ public class Professor {
         return especialidade;
     }
 
-    public void setEspecialidade(String especialidade) {
+    public void setEspecialidade(final String especialidade) {
         this.especialidade = especialidade;
     }
 
